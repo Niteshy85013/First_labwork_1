@@ -1,10 +1,5 @@
-'import playsound'
-playsound.playsound("hellow-word.mp3")
+a=5
 
-
-
-
-
-
-
-
+b=2
+c=a/b
+print(c)
