@@ -1,8 +1,9 @@
-num1=int(input("enter the first value:"))
-num2=int(input("enter the second value:"))
-num3=int(input("enter the third value:"))
-sum=num1+num2+num3
-print(f"the sum of given three number is{sum}")
+name=input("enter your name:")
+age=int(input("enter the age:"))
+print(f"Hellow my name is " + name + " and i am " +str(age) + " year old")
+
+
+
 
 
 
