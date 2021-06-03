@@ -10,7 +10,7 @@ root=Tk()
 root.title('Image Insertion')
 root.iconbitmap('male.ico')
 
-my_image= ImageTk.PhotoImage (Image .open('female.png') )
+my_image= ImageTk.PhotoImage (Image .open('female'))
 my_label=Label(image=my_image)
 my_label.pack()
 

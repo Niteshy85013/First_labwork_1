@@ -12,13 +12,6 @@ root.iconbitmap('cal.ico')
 e = Entry(root,width=55,borderwidth=15,bg="sky blue")
 e.grid(row=0,column=0 ,columnspan=6,padx=13,pady=19)
 
-def button_click(number):
-    current = e.get()
-    e.delete(0, END)
-    e.insert(0, str(current)+str(number))
-
-def button_clear():
-    e.delete(0, END)
 
 def button_add():
     first_number = e.get()
@@ -68,6 +61,15 @@ def button_division():
     e.delete(0,END)
 
 
+def button_clear():
+    e.delete(0, END)
+
+
+def button_click(number):
+    current = e.get()
+    e.delete(0, END)
+    e.insert(0, str(current)+str(number))
+
 #defining  the buttons
 
 button_1=Button(root,text="1", bg="gray", padx=35, pady=15, command=lambda:button_click(1))
@@ -81,14 +83,12 @@ button_8=Button(root,text="8",  bg="gray", padx=35, pady=15, command=lambda:butt
 button_9=Button(root,text="9",  bg="gray",  padx=35, pady=15, command=lambda:button_click(9))
 button_0=Button(root,text="0",  bg="gray",    padx=35, pady=15, command=lambda:button_click(0))
 
-
-
-button_equal=Button(root,text="=", bg="gray",padx=35,pady=15,command=button_equal)
-button_add=Button(root,text="+" ,bg="gray",padx=35, pady=15,command=button_add)
+button_equal=Button(root,text="=", bg="purple",padx=35,pady=15,command=button_equal)
+button_add=Button(root,text="+",bg="purple",padx=35, pady=15,command=button_add)
 button_clear=Button(root,text="clear", bg="red",padx=35, pady= 15,command=button_clear)
-button_subtract=Button(root,text="-",bg="gray",padx=35, pady=15 ,command=button_subtract)
-button_multiply=Button(root,text="*",bg="gray",padx=35,pady=15 ,command=button_multiply)
-button_division=Button(root,text="/",bg="gray",padx=35,pady=15 ,command=button_division)
+button_subtract=Button(root,text="-",bg="purple",padx=35, pady=15 ,command=button_subtract)
+button_multiply=Button(root,text="*",bg="purple",padx=35,pady=15 ,command=button_multiply)
+button_division=Button(root,text="/",bg="purple",padx=35,pady=15 ,command=button_division)
 
 
 
@@ -106,13 +106,13 @@ button_7.grid(row=1,    column=0)
 button_8.grid(row=1,    column=1)
 button_9.grid(row=1,    column=2)
 
-button_0.grid(row=4, column=1)
+button_0.grid(row=4, column=0)
 button_clear.grid(row=1, column=3, columnspan=1)
 button_add.grid(row=2, column=3)
 button_equal.grid(row=4, column=3, columnspan=1)
 button_subtract.grid(row=3,column=3)
 button_multiply.grid(row=4,column=2)
-button_division.grid(row=4,column=0)
+button_division.grid(row=4,column=1)
 
 
 
